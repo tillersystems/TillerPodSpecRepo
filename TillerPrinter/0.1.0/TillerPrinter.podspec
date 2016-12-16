@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint TillerSDK.podspec' to ensure this is a
+# Be sure to run `pod lib lint TillerPrinter.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TillerPrinter'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of TillerSDK.'
+  s.summary          = 'Pod to easily integrate Epson print SDK'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/tillersystems/tiller-printer'
+  s.homepage         = 'https://github.com/tillersystems/TillerPrinter'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Felix Carrard' => 'felix@tillersystems.com' }
-  s.source           = { :git => 'https://github.com/tillersystems/tiller-printer.git', :tag => s.version }
-  s.social_media_url = 'https://twitter.com/tillersystems'
+  s.author           = { 'Felix Carrard' => 'felix.carrard@gmail.com' }
+  s.source           = { :git => 'https://github.com/tillersystems/TillerPrinter.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
@@ -34,12 +34,11 @@ TODO: Add long description of the pod here.
   s.vendored_libraries = 'TillerPrinter/Epson/libepos2.a', 'TillerPrinter/Epson/libeposeasyselect.a'
   
   # s.resource_bundles = {
-  #   'TillerSDK' => ['TillerSDK/Assets/*.png']
+  #   'TillerPrinter' => ['TillerPrinter/Assets/*.png']
   # }
-  
+
+#s.public_header_files = 'Pod/Classes/**/*.h', 'TillerPrinter/Epson/*.h'
   s.frameworks = 'ExternalAccessory'
   s.library = 'xml2.2'
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
 end
