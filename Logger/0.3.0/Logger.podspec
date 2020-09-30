@@ -26,4 +26,4 @@ Pod::Spec.new do |s|
   ## Required Dependencies
   s.dependency 'XCGLogger', '7.0.0'
 
-
+end
