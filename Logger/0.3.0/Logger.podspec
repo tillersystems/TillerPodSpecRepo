@@ -22,13 +22,6 @@ Pod::Spec.new do |s|
     cor.source_files = 'Logger/*.swift', 'Logger/Destinations/OSLogDestination.swift'
   end
 
-  # creates a new spec with the name: Logger/NSLogger
-  s.subspec 'NSLogger' do |ns|
-    ns.source_files = 'Logger/Destinations/NSLoggerDestination.swift'
-
-    ## Optional Dependencies
-    ns.dependency 'NSLogger/Swift'
-  end
 
   ## Required Dependencies
   s.dependency 'XCGLogger', '7.0.0'
